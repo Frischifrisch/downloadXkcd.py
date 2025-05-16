@@ -7,7 +7,7 @@
     // Standard-Wiedergabegeschwindigkeit
     "playbackRate": 1,
     // Standard-Lautstärke (zwischen 0 und 1)
-    "volume": "0.95",
+    "volume": "0.80",
     // Letzte verwendete Wiedergabegeschwindigkeit
     "lastPlaybackRate": 1,
     // Erlaubt das Wiederherstellen des Wiedergabefortschritts
