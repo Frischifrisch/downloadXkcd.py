@@ -1,0 +1,481 @@
+{
+  // Aktiviert das gesamte Feature-Set
+  "enable": true,
+  "media": {
+    // Automatisches Abspielen von Medien beim Laden deaktiviert
+    "autoPlay": false,
+    // Standard-Wiedergabegeschwindigkeit
+    "playbackRate": 1,
+    // Standard-Lautstärke (zwischen 0 und 1)
+    "volume": "0.95",
+    // Letzte verwendete Wiedergabegeschwindigkeit
+    "lastPlaybackRate": 1,
+    // Erlaubt das Wiederherstellen des Wiedergabefortschritts
+    "allowRestorePlayProgress": {},
+    // Fortschritt der Wiedergabe (wird gespeichert)
+    "progress": {}
+  },
+  // Aktiviert Tastenkürzel (Hotkeys)
+  "enableHotkeys": true,
+  // Liste aller Tastenkürzel und deren Funktionen
+  "hotkeys": [
+    {
+      // Webseite im Vollbildmodus anzeigen
+      "desc": "Webseite im Vollbild",
+      "key": "enter",
+      "command": "setWebFullScreen",
+      "disabled": false
+    },
+    {
+      // Video im Vollbildmodus anzeigen
+      "desc": "Vollbild",
+      "key": "ctrl+enter",
+      "command": "setFullScreen",
+      "disabled": false
+    },
+    {
+      // Bild-in-Bild-Modus umschalten
+      "desc": "Bild-in-Bild-Modus umschalten",
+      "key": "shift+p",
+      "command": "togglePictureInPicture",
+      "disabled": false
+    },
+    {
+      // Screenshot vom Video erstellen
+      "desc": "Video-Screenshot",
+      "key": "ctrl+shift+s",
+      "command": "capture",
+      "disabled": false
+    },
+    {
+      // Automatische Wiederherstellung des Wiedergabefortschritts aktivieren/deaktivieren
+      "desc": "Automatische Wiederherstellung des Wiedergabefortschritts aktivieren oder deaktivieren",
+      "key": "ctrl+shift+r",
+      "command": "switchRestorePlayProgressStatus",
+      "disabled": false
+    },
+    {
+      // Vertikale Spiegelung des Videos
+      "desc": "Vertikale Spiegelung",
+      "key": "ctrl+shift+m",
+      "command": "setMirror",
+      "args": [
+        true
+      ],
+      "disabled": false
+    },
+    {
+      // Horizontale Spiegelung des Videos
+      "desc": "Horizontale Spiegelung",
+      "key": "shift+m",
+      "command": "setMirror",
+      "disabled": false
+    },
+    {
+      // Audio- und Videodateien herunterladen (experimentell)
+      "desc": "Audio- und Videodateien herunterladen (experimentelle Funktion)",
+      "key": "ctrl+shift+d",
+      "command": "mediaDownload",
+      "disabled": false
+    },
+    {
+      // Video verkleinern um 0.05
+      "desc": "Video verkleinern -0.05",
+      "key": "shift+x",
+      "command": "setScaleDown",
+      "disabled": false
+    },
+    {
+      // Video vergrößern um 0.05
+      "desc": "Video vergrößern +0.05",
+      "key": "shift+c",
+      "command": "setScaleUp",
+      "disabled": false
+    },
+    {
+      // Video-Transformation zurücksetzen
+      "desc": "Video zurücksetzen",
+      "key": "shift+y",
+      "command": "resetTransform",
+      "disabled": false
+    },
+    {
+      // Bild um 10px nach rechts verschieben
+      "desc": "Bild um 10px nach rechts verschieben",
+      "key": "ctrl+shift+arrowright",
+      "command": "setTranslateRight",
+      "disabled": false
+    },
+    {
+      // Bild um 10px nach links verschieben
+      "desc": "Bild um 10px nach links verschieben",
+      "key": "ctrl+shift+arrowleft",
+      "command": "setTranslateLeft",
+      "disabled": false
+    },
+    {
+      // Bild um 10px nach oben verschieben
+      "desc": "Bild um 10px nach oben verschieben",
+      "key": "ctrl+shift+arrowup",
+      "command": "setTranslateUp",
+      "disabled": false
+    },
+    {
+      // Bild um 10px nach unten verschieben
+      "desc": "Bild um 10px nach unten verschieben",
+      "key": "ctrl+shift+arrowdown",
+      "command": "setTranslateDown",
+      "disabled": false
+    },
+    {
+      // 5 Sekunden vorspulen
+      "desc": "5 Sekunden vorwärts",
+      "key": "arrowright",
+      "command": "setCurrentTimeUp",
+      "disabled": false
+    },
+    {
+      // 5 Sekunden zurückspulen
+      "desc": "5 Sekunden zurück",
+      "key": "arrowleft",
+      "command": "setCurrentTimeDown",
+      "disabled": false
+    },
+    {
+      // 30 Sekunden vorspulen
+      "desc": "30 Sekunden vorwärts",
+      "key": "shift+arrowright",
+      "command": "setCurrentTimeUp",
+      "args": [
+        30
+      ],
+      "disabled": false
+    },
+    {
+      // 30 Sekunden zurückspulen
+      "desc": "30 Sekunden zurück",
+      "key": "shift+arrowleft",
+      "command": "setCurrentTimeDown",
+      "args": [
+        -30
+      ],
+      "disabled": false
+    },
+    {
+      // Lautstärke um 5% erhöhen
+      "desc": "Lautstärke um 5% erhöhen",
+      "key": "arrowup",
+      "command": "setVolumeUp",
+      "args": [
+        0.05
+      ],
+      "disabled": false
+    },
+    {
+      // Lautstärke um 5% verringern
+      "desc": "Lautstärke um 5% verringern",
+      "key": "arrowdown",
+      "command": "setVolumeDown",
+      "args": [
+        -0.05
+      ],
+      "disabled": false
+    },
+    {
+      // Lautstärke um 20% erhöhen
+      "desc": "Lautstärke um 20% erhöhen",
+      "key": "shift+arrowup",
+      "command": "setVolumeUp",
+      "args": [
+        0.2
+      ],
+      "disabled": false
+    },
+    {
+      // Lautstärke um 20% verringern
+      "desc": "Lautstärke um 20% verringern",
+      "key": "shift+arrowdown",
+      "command": "setVolumeDown",
+      "args": [
+        -0.2
+      ],
+      "disabled": false
+    },
+    {
+      // Wiedergabe pausieren oder fortsetzen
+      "desc": "Pause/Wiedergabe umschalten",
+      "key": "space",
+      "command": "switchPlayStatus",
+      "disabled": false
+    },
+    {
+      // Wiedergabegeschwindigkeit um 0.1 verringern
+      "desc": "Wiedergabegeschwindigkeit um 0.1 verringern",
+      "key": "ctrl+shift+x",
+      "command": "setPlaybackRateDown",
+      "disabled": false
+    },
+    {
+      // Wiedergabegeschwindigkeit um 0.1 erhöhen
+      "desc": "Wiedergabegeschwindigkeit um 0.1 erhöhen",
+      "key": "ctrl+shift+c",
+      "command": "setPlaybackRateUp",
+      "disabled": false
+    },
+    {
+      // Wiedergabegeschwindigkeit zurücksetzen
+      "desc": "Normale Wiedergabegeschwindigkeit",
+      "key": "ctrl+shift+z",
+      "command": "resetPlaybackRate",
+      "disabled": false
+    },
+    {
+      // Wiedergabegeschwindigkeit auf 1x setzen (Taste 1)
+      "desc": "Wiedergabegeschwindigkeit auf 1x setzen",
+      "key": "Digit1",
+      "command": "setPlaybackRatePlus",
+      "args": 1,
+      "disabled": false
+    },
+    {
+      // Wiedergabegeschwindigkeit auf 1x setzen (Nummernblock 1)
+      "desc": "Wiedergabegeschwindigkeit auf 1x setzen",
+      "key": "Numpad1",
+      "command": "setPlaybackRatePlus",
+      "args": 1,
+      "disabled": true
+    },
+    {
+      // Wiedergabegeschwindigkeit auf 2x setzen (Taste 2)
+      "desc": "Wiedergabegeschwindigkeit auf 2x setzen",
+      "key": "Digit2",
+      "command": "setPlaybackRatePlus",
+      "args": 2,
+      "disabled": false
+    },
+    {
+      // Wiedergabegeschwindigkeit auf 2x setzen (Nummernblock 2)
+      "desc": "Wiedergabegeschwindigkeit auf 2x setzen",
+      "key": "Numpad2",
+      "command": "setPlaybackRatePlus",
+      "args": 2,
+      "disabled": true
+    },
+    {
+      // Wiedergabegeschwindigkeit auf 3x setzen (Taste 3)
+      "desc": "Wiedergabegeschwindigkeit auf 3x setzen",
+      "key": "Digit3",
+      "command": "setPlaybackRatePlus",
+      "args": 3,
+      "disabled": false
+    },
+    {
+      // Wiedergabegeschwindigkeit auf 3x setzen (Nummernblock 3)
+      "desc": "Wiedergabegeschwindigkeit auf 3x setzen",
+      "key": "Numpad3",
+      "command": "setPlaybackRatePlus",
+      "args": 3,
+      "disabled": true
+    },
+    {
+      // Wiedergabegeschwindigkeit auf 4x setzen (Taste 4)
+      "desc": "Wiedergabegeschwindigkeit auf 4x setzen",
+      "key": "Digit4",
+      "command": "setPlaybackRatePlus",
+      "args": 4,
+      "disabled": false
+    },
+    {
+      // Wiedergabegeschwindigkeit auf 4x setzen (Nummernblock 4)
+      "desc": "Wiedergabegeschwindigkeit auf 4x setzen",
+      "key": "Numpad4",
+      "command": "setPlaybackRatePlus",
+      "args": 4,
+      "disabled": true
+    },
+    {
+      // Zum nächsten Einzelbild springen (deaktiviert)
+      "desc": "Nächstes Bild",
+      "key": "ctrl+shift+f",
+      "command": "freezeFrame",
+      "args": 1,
+      "disabled": true
+    },
+    {
+      // Zum vorherigen Einzelbild springen
+      "desc": "Vorheriges Bild",
+      "key": "ctrl+shift+d",
+      "command": "freezeFrame",
+      "args": -1,
+      "disabled": false
+    },
+    {
+      // Helligkeit erhöhen
+      "desc": "Helligkeit erhöhen",
+      "key": "ctrl+shift+e",
+      "command": "setBrightnessUp",
+      "disabled": false
+    },
+    {
+      // Helligkeit verringern
+      "desc": "Helligkeit verringern",
+      "key": "ctrl+shift+w",
+      "command": "setBrightnessDown",
+      "disabled": false
+    },
+    {
+      // Kontrast erhöhen
+      "desc": "Kontrast erhöhen",
+      "key": "ctrl+shift+t",
+      "command": "setContrastUp",
+      "disabled": false
+    },
+    {
+      // Kontrast verringern
+      "desc": "Kontrast verringern",
+      "key": "ctrl+shift+r",
+      "command": "setContrastDown",
+      "disabled": false
+    },
+    {
+      // Sättigung erhöhen
+      "desc": "Sättigung erhöhen",
+      "key": "ctrl+shift+u",
+      "command": "setSaturationUp",
+      "disabled": false
+    },
+    {
+      // Sättigung verringern
+      "desc": "Sättigung verringern",
+      "key": "ctrl+shift+z",
+      "command": "setSaturationDown",
+      "disabled": false
+    },
+    {
+      // Farbton erhöhen
+      "desc": "Farbton erhöhen",
+      "key": "ctrl+shift+o",
+      "command": "setHueUp",
+      "disabled": false
+    },
+    {
+      // Farbton verringern
+      "desc": "Farbton verringern",
+      "key": "ctrl+shift+i",
+      "command": "setHueDown",
+      "disabled": false
+    },
+    {
+      // Unschärfe um 1px erhöhen
+      "desc": "Unschärfe um 1px erhöhen",
+      "key": "ctrl+shift+k",
+      "command": "setBlurUp",
+      "disabled": false
+    },
+    {
+      // Unschärfe um 1px verringern
+      "desc": "Unschärfe um 1px verringern",
+      "key": "ctrl+shift+j",
+      "command": "setBlurDown",
+      "disabled": false
+    },
+    {
+      // Filter und Transformationen zurücksetzen
+      "desc": "Bild zurücksetzen",
+      "key": "shift+q",
+      "command": "resetFilterAndTransform",
+      "disabled": false
+    },
+    {
+      // Bild um 90 Grad drehen
+      "desc": "Bild um 90 Grad drehen",
+      "key": "shift+s",
+      "command": "setRotate",
+      "disabled": false
+    },
+    {
+      // Nächste Episode abspielen
+      "desc": "Nächste Episode abspielen",
+      "key": "shift+n",
+      "command": "setNextVideo",
+      "disabled": false
+    },
+    {
+      // Debugger-Breakpoint einfügen
+      "desc": "Debugger-Breakpoint einfügen",
+      "key": "ctrl+shift+alt+d",
+      "command": "debuggerNow",
+      "disabled": false
+    },
+    {
+      // JavaScript-Skript ausführen
+      "desc": "JS-Skript ausführen",
+      "key": "ctrl+j ctrl+s",
+      "when": "",
+      "disabled": false
+    }
+  ],
+  "mouse": {
+    // Maussteuerung aktivieren
+    "enable": true,
+    // Zeit in Millisekunden für langen Klick
+    "longPressTime": 400
+  },
+  "ui": {
+    // Benutzeroberfläche aktivieren
+    "enable": true,
+    // UI immer anzeigen
+    "alwaysShow": true,
+    "mod": {
+      "recommend": {
+        // Empfehlungen anzeigen (hier deaktiviert)
+        "enable": false
+      }
+    }
+  },
+  "download": {
+    // Download-Funktion aktivieren
+    "enable": true
+  },
+  "enhance": {
+    // Blockiert das Setzen der Wiedergabegeschwindigkeit nicht
+    "blockSetPlaybackRate": false,
+    // Blockiert das Setzen der aktuellen Zeit nicht
+    "blockSetCurrentTime": false,
+    // Blockiert das Setzen der Lautstärke nicht
+    "blockSetVolume": false,
+    // Experimentelle Features erlauben
+    "allowExperimentFeatures": true,
+    // Externe Konfiguration erlauben
+    "allowExternalCustomConfiguration": true,
+    // Akustische Verstärkung erlauben
+    "allowAcousticGain": true,
+    // Steuerung von Cross-Origin-Medien erlauben
+    "allowCrossOriginControl": true,
+    // Menü standardmäßig ausgeklappt anzeigen
+    "unfoldMenu": true
+  },
+  // Spracheinstellung (Deutsch)
+  "language": "de-DE",
+  // Debug-Modus aktivieren
+  "debug": true,
+  "blacklist": {
+    // Gesperrte URLs
+    "urls": [
+      "https://www.youtube.com/",
+      "https://www.twitch.tv/"
+    ],
+    // Gesperrte Domains
+    "domains": [
+      "www.youtube.com",
+      "www.twitch.tv",
+      "store.steampowered.com"
+    ]
+  },
+  // Zeitstempel für erfolgreiche Verbindung zum Remote-Helper
+  "contactRemoteHelperSuccessTime": 1747382611732,
+  // Letzter Kontakt zum Remote-Helper
+  "lastContactRemoteHelperTime": 1747382611017,
+  // Intervall für die Synchronisation mit dem Remote-Helper (in ms)
+  "remoteHelperSyncInterval": 14400000
+}
